@@ -1,0 +1,37 @@
+!!! 5
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %link{rel: 'stylesheet', href: '/media/reset.css', type: 'text/css'}
+    %link{rel: 'stylesheet', href: '/media/stylesheet.css', type: 'text/css'}
+    %title= [meta[:title], "François Vaux"].compact.join('—')
+  %body
+    %img#avatar{src: "/media/avatar.png"}
+    %nav
+      %li>
+        %a{href: '/'}>
+          %i.icon-home
+            %span Home
+      - meta.fetch(:nav, []).each do |text, url|
+        %li>
+          %a{href: url}>= text
+
+    = yield
+
+    %footer
+      %a{href: "http://creativecommons.org/licenses/by-sa/3.0/fr/", rel: 'license'}
+        %i.icon-cc
+          %span License
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3749748-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        if(document.location.hostname.match(/\.local$/)) return;
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+

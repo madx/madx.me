@@ -1,0 +1,8 @@
+articles/etendre_markdown_redcarpet.html:
+  :title: Étendre Markdown avec RedCarpet
+  # :nav:
+  #   :articles: /articles/
+articles/git_rebase_autosquash.html:
+  :title: git rebase --autosquash
+  # :nav:
+  #   :articles: /articles/

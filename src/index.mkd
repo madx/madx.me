@@ -1,0 +1,40 @@
+madx.me
+=======
+
+I work at [Autrement](http://autrementleblog.fr/) where I help building an
+awesome hotel comparison service named [HotelHotel](http://hotelhotel.com/) and
+a magazine about unusual Bed&Breakfast places in France named
+[Chambres à Part](http://chambresapart.fr).
+
+``` #haml
+%ul.social-list
+  %li
+    %a{href: 'https://twitter.com/madx'}
+      %i.icon-twitter
+        %span Twitter
+  %li
+    %a{href: 'https://github.com/madx'}
+      %i.icon-github
+        %span Github
+  %li
+    %a{href: 'https://plus.google.com/103196461831687541649'}
+      %i.icon-googleplus
+        %span Google+
+  %li
+    %a{href: 'xmpp:francois.vaux@im.apinc.org'}
+      %i.icon-jabber
+        %span Jabber/XMPP
+```
+
+Articles
+--------
+
+* [Managing your identity in Git](/articles/managing_your_identity_in_git.html)
+  <span class="date">Feb 1<sup>st</sup>, 2013</span>
+  ![fr](/media/flag_en.png)
+* [git rebase --autosquash](/articles/git_rebase_autosquash.html)
+  <span class="date">May 24<sup>th</sup>, 2012</span>
+  ![fr](/media/flag_fr.png)
+* [Étendre MarkDown avec RedCarpet](/articles/etendre_markdown_redcarpet.html)
+  <span class="date">Dec 20<sup>th</sup>, 2011</span>
+  ![fr](/media/flag_fr.png)
