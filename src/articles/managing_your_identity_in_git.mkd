@@ -5,7 +5,7 @@
 Managing your identity in Git
 =============================
 
-I use Git for a lot of tasks, wether it be work, open-source dev or personal
+I use Git for a lot of tasks, whether it be work, open-source dev or personal
 projects. At work we sometimes enjoy doing some pair-programming.
 
 In all these situations, you want the work you produce to be correctly
