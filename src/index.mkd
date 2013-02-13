@@ -31,7 +31,7 @@ Articles
 
 * [Managing your identity in Git](/articles/managing_your_identity_in_git.html)
   <span class="date">Feb 1<sup>st</sup>, 2013</span>
-  ![fr](/media/flag_en.png)
+  ![en](/media/flag_en.png)
 * [git rebase --autosquash](/articles/git_rebase_autosquash.html)
   <span class="date">May 24<sup>th</sup>, 2012</span>
   ![fr](/media/flag_fr.png)
