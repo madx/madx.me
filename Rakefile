@@ -15,8 +15,9 @@ class Renderer < Redcarpet::Render::HTML
   def block_code(code, language)
     language ||= 'ruby'
 
-    if language == '#haml'
-      haml(code)
+    if language.start_with?('#')
+      processor = language.slice(1..-1)
+      send(processor, code) if %w(haml mute).include?(processor)
     else
       Albino.colorize(code, language).gsub("\n", "&#10;")
     end
@@ -38,6 +39,10 @@ class Renderer < Redcarpet::Render::HTML
 
   def haml(source)
     Haml::Engine.new(source, HAML_OPTIONS).render
+  end
+
+  def mute(_)
+    ""
   end
 end
 
