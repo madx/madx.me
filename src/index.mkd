@@ -6,6 +6,9 @@ awesome hotel comparison service named [HotelHotel](http://hotelhotel.com/) and
 a magazine about unusual Bed&Breakfast places in France named
 [Chambres à Part](http://chambresapart.fr).
 
+This site is where I keep my writings, among other things. You can follow me on
+Twitter, Github or Google+, or contact me through XMPP.
+
 ``` #haml
 %ul.social-list
   %li
