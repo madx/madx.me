@@ -203,6 +203,9 @@ body {
     font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
     background-color: rgba(128, 128, 128, 0.15);
     padding: 1px 3px; }
+  body img[src^="/media/images"] {
+    display: block;
+    margin: 1.5rem auto; }
   body .date {
     font-size: 1.2em;
     font-family: "NobileItalic";
@@ -223,7 +226,7 @@ body {
         text-decoration: none; }
   body div.highlight {
     padding: 0;
-    margin: 0.5rem 1rem;
+    margin: 1.5rem 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -o-border-radius: 1rem;

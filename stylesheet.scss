@@ -235,6 +235,11 @@ body {
     padding: 1px 3px;
   }
 
+  img[src^="/media/images"] {
+    display: block;
+    margin: 1.5rem auto;
+  }
+
   .date {
     font-size: 1.2em;
     font-family: "NobileItalic";
@@ -261,7 +266,7 @@ body {
 
   div.highlight {
     padding: 0;
-    margin: 0.5rem 1rem;
+    margin: 1.5rem 1rem;
     @include border-radius(1rem);
     background-color: #1d1d1d;
     color: #f6f3e8;
