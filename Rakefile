@@ -5,8 +5,12 @@ Bundler.require
 
 require 'digest/md5'
 require 'rake/clean'
+require 'ostruct'
 
-DOMAIN = 'madx.me'
+begin
+  config_file = File.expand_path('config.yml', File.dirname(__FILE__))
+  Config = OpenStruct.new(YAML.load_file(config_file))
+end
 
 # =============================================================================
 # Lib
@@ -17,17 +21,9 @@ class Renderer < Redcarpet::Render::HTML
 
     if language.start_with?('#')
       processor = language.slice(1..-1)
-      send(processor, code) if %w(haml mute).include?(processor)
+      send(processor, code) if respond_to?(processor)
     else
       Albino.colorize(code, language).gsub("\n", "&#10;")
-    end
-  end
-
-  def preprocess(document)
-    @fragments = {}
-
-    document.gsub(/<haml>(.+?)<\/haml>/m) do |match|
-      Haml::Engine.new($~[1].strip, HAML_OPTIONS).render
     end
   end
 
@@ -39,10 +35,6 @@ class Renderer < Redcarpet::Render::HTML
 
   def haml(source)
     Haml::Engine.new(source, HAML_OPTIONS).render
-  end
-
-  def mute(_)
-    ""
   end
 end
 
@@ -91,7 +83,7 @@ rule '.html' => [html_to_mkdn, template_file, meta_file, __FILE__] + HTML_DIRS d
   url    = task.name.sub('build/', '')
   meta   = Meta[url] || {}
 
-  meta.update(url: File.join(DOMAIN, url))
+  meta.update(url: File.join(Config.domain, url))
 
   document = Template.render(Object.new, meta: meta) { html }
 
@@ -118,7 +110,7 @@ end
 
 desc "Deploie sur le serveur"
 task :deploy do
-  system "rsync -e ssh -avz --delete-after build/ garbure:sites/madx.me/"
+  system "rsync -e ssh -avz --delete-after build/ #{Config.deploy_to}"
 end
 
 task :default => [:update_media, template_file, meta_file] + HTML
