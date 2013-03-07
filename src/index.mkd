@@ -32,6 +32,9 @@ Twitter, Github or Google+, or contact me through XMPP.
 Articles
 --------
 
+* [Efficient Vim](/articles/efficient_vim.html)
+  <span class="date">Mar 4<sup>th</sup>, 2013</span>
+  ![en](/media/flag_en.png)
 * [Managing your identity in Git](/articles/managing_your_identity_in_git.html)
   <span class="date">Feb 1<sup>st</sup>, 2013</span>
   ![en](/media/flag_en.png)
