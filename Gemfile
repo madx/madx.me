@@ -4,7 +4,4 @@ gem "rake"
 gem "haml"
 gem "redcarpet"
 gem "albino"
-
-group :development do
-  gem "sass"
-end
+gem "sass"
