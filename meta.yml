@@ -1,8 +1,10 @@
 articles/etendre_markdown_redcarpet.html:
   :title: Étendre Markdown avec RedCarpet
-  # :nav:
-  #   :articles: /articles/
 articles/git_rebase_autosquash.html:
   :title: git rebase --autosquash
-  # :nav:
-  #   :articles: /articles/
+articles/managing_your_identity_in_git.html:
+  :title: Managing your identity in Vim
+articles/efficient_vim.html:
+  :title: Efficient Vim
+cv.html:
+  :title: Curriculum Vitæ
