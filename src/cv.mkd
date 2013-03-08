@@ -46,7 +46,7 @@ Compétences
   normes) ; CSS (2.1 et 3) ; C et Java
 * **Ruby on Rails** (2.3 à 4.0) ; jQuery/Zepto.js ; Sinatra
 * MySQL et Sqlite ; MongoDB ; Redis
-* **Linux** (ArchLinux, Debian) ; Max OS X
+* **Linux** (ArchLinux, Debian) ; Mac OS X
 * **Vim**, **Git**
 * Anglais lu, écrit et parlé
 * Méthodologies de développement Agiles (TDD/BDD)
