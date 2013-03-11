@@ -31,7 +31,7 @@ class Renderer < Redcarpet::Render::HTML
     "\n<hr />\n"
   end
 
-  private
+  protected
 
   def haml(source)
     Haml::Engine.new(source, HAML_OPTIONS).render
