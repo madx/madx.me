@@ -8,6 +8,8 @@ GitHub : <http://github.com/madx><br />
 Né le 22/12/1988<br />
 Permis B, véhicule personnel
 
+---
+
 Expérience
 ----------
 
@@ -38,6 +40,7 @@ Expérience
 
     Développement et déploiement d'applications et de sites à caractère personnel.
 
+---
 
 Compétences
 -----------
@@ -52,6 +55,7 @@ Compétences
 * Méthodologies de développement Agiles (TDD/BDD)
 * Veille technologique active et autoformation. Capacité à se documenter.
 
+---
 
 Formation
 ---------
