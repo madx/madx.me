@@ -1,12 +1,20 @@
 François Vaux
 =============
 
-Marseille, France<br />
-Tél. : 06.51.68.53.13 (portable)<br />
-Courriel : <var>prénom</var>@yapok.org<br />
-GitHub : <http://github.com/madx><br />
-Né le 22/12/1988<br />
-Permis B, véhicule personnel
+``` #haml
+%p
+  Marseille, France
+  %br
+  %i.icon-mail
+  <var>prenom</var>@yapok.org
+  %br
+  %i.icon-github
+  %a{href: "http://github.com/madx"} github.com/madx
+  %br
+  Né le 22/12/1988
+  %br
+  Permis B, véhicule personnel
+```
 
 ---
 
@@ -45,12 +53,12 @@ Expérience
 Compétences
 -----------
 
-* **Ruby** (1.8.7 à 2.0) ; JavaScript ; Bash ; HTML (et ses différentes
-  normes) ; CSS (2.1 et 3) ; C et Java
+* **Ruby** (1.8.7 à 2.0) ; JavaScript ; HTML ; CSS (2.1 et 3) ; C et
+  Java
 * **Ruby on Rails** (2.3 à 4.0) ; jQuery/Zepto.js ; Sinatra
 * MySQL et Sqlite ; MongoDB ; Redis
 * **Linux** (ArchLinux, Debian) ; Mac OS X
-* **Vim**, **Git**
+* **Vim**, **Git**, outils UNIX et shells
 * Anglais lu, écrit et parlé
 * Méthodologies de développement Agiles (TDD/BDD)
 * Veille technologique active et autoformation. Capacité à se documenter.
@@ -72,9 +80,10 @@ Formation
 
 ---
 
-Loisirs
--------
+Intérêts
+--------
 
+* Typographie, design
 * Cuisine, pâtisserie
 * Bricolage
 * Lecture
