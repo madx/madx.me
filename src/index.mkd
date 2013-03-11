@@ -3,8 +3,8 @@ François Vaux
 
 ---
 
-Je suis actuellement à la recherche d'un emploi à Marseille ou à ses
-alentours côté sud-est (Aubagne, La Ciotat, …). Plus d'informations sont disponibles sur
+Je suis actuellement à la recherche d'un emploi à Marseille ou ses alentours
+côté sud-est (Aubagne, La Ciotat, …). Plus d'informations sont disponibles sur
 [mon cv](/cv.html) et sur [ce post](/articles/nouvelles_opportunites.html).
 
 ---
@@ -40,6 +40,9 @@ Twitter, Github or Google+, or contact me through XMPP.
 Articles
 --------
 
+* [Nouvelles Opportunités](/articles/nouvelles_opportunites.html)
+  <span class="date">Mar 11<sup>th</sup>, 2013</span>
+  ![fr](/media/flag_fr.png)
 * [Efficient Vim](/articles/efficient_vim.html)
   <span class="date">Mar 4<sup>th</sup>, 2013</span>
   ![en](/media/flag_en.png)
