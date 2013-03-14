@@ -29,7 +29,8 @@ beaucoup en capacité d'adaptation et d'organisation personnelle.
 ---
 
 Je suis donc maintenant à la recherche d'un poste de développeur Web, idéalement
-à Marseille ou ses alentours (du côté d'Aubagne ou la Ciotat).
+à Marseille ou ses alentours (du côté d'Aubagne ou la Ciotat). Je suis
+disponible à partir du 1<sup>er</sup> avril.
 
 Mes intérêts sont toujours portés autour de Ruby, des technologies gravitant
 dans son univers et du développement front-end, mais je suis curieux de nature
