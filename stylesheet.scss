@@ -398,3 +398,39 @@ body {
 .highlight .vg { color: #C6C5FE;  } /* Name.Variable.Global */
 .highlight .vi { color: #C6C5FE;  } /* Name.Variable.Instance */
 .highlight .il { color: #FF73FD;  } /* Literal.Number.Integer.Long */
+
+@media print {
+  body > nav, footer {
+    display: none
+ }
+
+ @page {
+   size: auto;
+   margin: 5mm;
+ }
+
+  body {
+    font-size: 12px;
+    max-width: 100%;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  hr {
+    page-break-after: avoid;
+  }
+
+  h2, h3, h4, h5, h6 {
+    page-break-before: avoid;
+    page-break-after: avoid;
+  }
+
+  ul, p {
+    page-break-inside: avoid;
+  }
+
+  a[href] {
+    color: $text !important;
+    text-decoration: none;
+  }
+}
