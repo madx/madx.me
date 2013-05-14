@@ -18,8 +18,6 @@ En parcourant le manuel de `git rebase` récemment j'ai fait la découverte de l
 merveilleuse option `--autosquash` et de la directive de configuration associée
 ainsi que des options `--squash` et `--fixup` de `git commit`.
 
-.end-abstract
-
 Le principe est simple : plutôt que de manuellement réorganiser et marquer les
 commits de `squash`/`fixup` avec l'éditeur que Git ouvre lors du `rebase`
 interactifs, laisser Git gérer ça tout seul !
