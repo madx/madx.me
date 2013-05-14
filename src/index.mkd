@@ -1,18 +1,7 @@
 François Vaux
 =============
 
----
-
-Je suis actuellement à la recherche d'un emploi à Marseille ou ses alentours
-côté sud-est (Aubagne, La Ciotat, …). Plus d'informations sont disponibles sur
-[mon cv](/cv.html) et sur [ce post](/articles/nouvelles_opportunites.html).
-
----
-
-I work at [Autrement](http://autrementleblog.fr/) where I help building an
-awesome hotel comparison service named [HotelHotel](http://hotelhotel.com/) and
-a magazine about unusual Bed&Breakfast places in France named
-[Chambres à Part](http://chambresapart.fr).
+I'm a web developer working at [Synbioz](http://synbioz.com/).
 
 This site is where I keep my writings, among other things. You can follow me on
 Twitter, Github or Google+, or contact me through XMPP.
