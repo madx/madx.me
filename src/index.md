@@ -4,7 +4,11 @@ title: ~
 François Vaux
 =============
 
-I'm a web developer working at [Synbioz](http://synbioz.com/).
+I'm a web developer working at [Synbioz](http://synbioz.com/) where I build web
+applications using Ruby on Rails and JavaScript.
+
+I'm also in charge of developing our brand in the South of France through
+[Azur on Rails](http://azuronrails.com/).
 
 This site is where I keep my writings, among other things. You can follow me on
 Twitter, Github or Google+, or contact me through XMPP.
