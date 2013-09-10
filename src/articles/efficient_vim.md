@@ -1,3 +1,6 @@
+title: Efficient Vim
+---
+
 ``` #haml
 .date Mar 4<sup>th</sup>, 2013
 ```

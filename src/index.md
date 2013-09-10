@@ -1,3 +1,6 @@
+title: ~
+---
+
 François Vaux
 =============
 

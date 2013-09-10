@@ -6,6 +6,7 @@ Bundler.require
 require 'digest/md5'
 require 'rake/clean'
 require 'ostruct'
+require 'yaml'
 
 begin
   config_file = File.expand_path('config.yml', File.dirname(__FILE__))
@@ -45,26 +46,23 @@ MARKDOWN_OPTIONS = {
 }
 Markdown = Redcarpet::Markdown.new(Renderer, MARKDOWN_OPTIONS)
 
-template_file = File.expand_path('template.haml', File.dirname(__FILE__))
+template_file = File.expand_path('templates/template.haml', File.dirname(__FILE__))
 HAML_OPTIONS = {
   attr_wrapper: '"'
 }
 Template = Haml::Engine.new(File.read(template_file), HAML_OPTIONS)
 
-meta_file = File.expand_path('meta.yml', File.dirname(__FILE__))
-Meta = YAML.load_file(meta_file) || {}
-
 # =============================================================================
 # Files
 
-MKDN = FileList['src/**/*.mkd']
+MKDN = FileList['src/**/*.md']
 HTML = MKDN.pathmap('%{^src,build}d/%n.html')
 
 MKDN_DIRS = FileList['src/**/*'].select { |fn| File.directory?(fn) }
 HTML_DIRS = MKDN_DIRS.pathmap('%{^src,build}p')
 MEDIA_DIR = 'build/media'
 
-html_to_mkdn = lambda { |p| p.pathmap('%{^build,src}d/%n.mkd') }
+html_to_mkdn = lambda { |p| p.pathmap('%{^build,src}d/%n.md') }
 
 # =============================================================================
 # Tasks
@@ -75,15 +73,13 @@ CLOBBER.include('build/media')
 
 HTML_DIRS.each { |dir| directory dir }
 
-rule '.html' => [html_to_mkdn, template_file, meta_file, __FILE__] + HTML_DIRS do |task|
+rule '.html' => [html_to_mkdn, template_file, __FILE__] + HTML_DIRS do |task|
   puts "compile #{task.name}"
 
-  source = File.read(task.source)
+  content = File.read(task.source)
+  header, source = content.split(/^---$/, 2)
   html   = Markdown.render(source)
-  url    = task.name.sub('build/', '')
-  meta   = Meta[url] || {}
-
-  meta.update(url: File.join(Config.domain, url))
+  meta = OpenStruct.new(YAML.load(header))
 
   document = Template.render(Object.new, meta: meta) { html }
 
@@ -94,12 +90,12 @@ end
 
 directory MEDIA_DIR
 
-desc "Met à jour le dossier media"
+desc "Update the media folder"
 task :update_media => MEDIA_DIR do
   sh "cp -urv media/ #{MEDIA_DIR.pathmap('%d')}"
 end
 
-desc "Liste les sources et documents produits"
+desc "List sources and outputs"
 task :env do
   print_file_list = lambda { |fl| puts fl.map { |p| "  #{p}" }.join("\n") }
   puts "Sources:"
@@ -108,9 +104,9 @@ task :env do
   print_file_list[HTML]
 end
 
-desc "Deploie sur le serveur"
+desc "Deploy using rsync"
 task :deploy do
   system "rsync -e ssh -avz --delete-after build/ #{Config.deploy_to}"
 end
 
-task :default => [:update_media, template_file, meta_file] + HTML
+task :default => [:update_media, 'templates'] + HTML

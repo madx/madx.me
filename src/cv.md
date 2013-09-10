@@ -1,3 +1,6 @@
+title: CV
+---
+
 François Vaux
 =============
 

@@ -1,8 +1,11 @@
+title: Étendre Markdown avec RedCarpet
+---
+
 ``` #haml
 .date 20 décembre 2011
 ```
 
-Étendre MarkDown avec RedCarpet
+Étendre Markdown avec RedCarpet
 ===============================
 
 RedCarpet 2 est sorti il y a environ 2 semaines, et j'utilisais déjà la version

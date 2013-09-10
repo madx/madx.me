@@ -4,7 +4,7 @@
     %meta{charset: 'utf-8'}
     %link{rel: 'stylesheet', href: '/media/reset.css', type: 'text/css'}
     %link{rel: 'stylesheet', href: '/media/stylesheet.css', type: 'text/css'}
-    %title= [meta[:title], "François Vaux"].compact.join(' — ')
+    %title= [meta.title, "François Vaux"].compact.join(' — ')
   %body
     %img#avatar{src: "/media/avatar.png"}
     %nav
@@ -12,9 +12,6 @@
         %a{href: '/'}>
           %i.icon-home
             %span Home
-      - meta.fetch(:nav, []).each do |text, url|
-        %li>
-          %a{href: url}>= text
 
     = yield
 
@@ -29,7 +26,7 @@
       _gaq.push(['_trackPageview']);
 
       (function() {
-        if(document.location.hostname.match(/\.local$/)) return;
+        if(document.location.hostname.match(/\.dev$/)) return;
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);

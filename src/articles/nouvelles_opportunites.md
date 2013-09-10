@@ -1,3 +1,6 @@
+title: Nouvelles opportunités
+---
+
 ``` #haml
 .date Mar 11<sup>th</sup>, 2013
 ```

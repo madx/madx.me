@@ -1,3 +1,6 @@
+title: git rebase --autosquash
+---
+
 ``` #haml
 .date 24 mai 2012
 ```
