@@ -40,36 +40,36 @@ Compétences
 Expérience
 ----------
 
-* **Avril 2013 – octobre 2013** : Développeur Web – [Synbioz][Synbioz]<br />
-  Développement d'applications Ruby on Rails et JavaScript pour les clients de
-  la société.
+*   **Avril 2013 – octobre 2013** : Développeur Web – [Synbioz][Synbioz]<br />
+    Développement d'applications Ruby on Rails et JavaScript pour les clients de
+    la société.
+    
+    Prise de contact téléphonique avec les clients, étude de leurs besoins métier
+    et réalisation des spécifications techniques de leurs produits. Rédaction des
+    estimations et des devis.
 
-  Prise de contact téléphonique avec les clients, étude de leurs besoins métier
-  et réalisation des spécifications techniques de leurs produits. Rédaction des
-  estimations et des devis.
+    Rédaction d'articles techniques publiés sur le blog de la société.
 
-  Rédaction d'articles techniques publiés sur le blog de la société.
+*   **Avril 2012 – avril 2013**: Développeur Web – [Autrement][Autrement]<br />
+    Développement sur le site HotelHotel et sur les outils internes associés.
 
-* **Avril 2012 – avril 2013**: Développeur Web – [Autrement][Autrement]<br />
-  Développement sur le site HotelHotel et sur les outils internes associés.
+    Amélioration des processus de traitement des données métier et création
+    d'outils de reporting et de statistiques, mise en place d'indicateurs de
+    qualité de la base de données.
 
-  Amélioration des processus de traitement des données métier et création
-  d'outils de reporting et de statistiques, mise en place d'indicateurs de
-  qualité de la base de données.
+    Migration de la plupart des applications de Rails 2.3 à Rails 3.2. Migration
+    de Apache/Passenger à Nginx/Unicorn.
 
-  Migration de la plupart des applications de Rails 2.3 à Rails 3.2. Migration
-  de Apache/Passenger à Nginx/Unicorn.
+    Développement sous Ruby 1.8, 1.9 et 2.0.
 
-  Développement sous Ruby 1.8, 1.9 et 2.0.
+*   **Juin/Juillet 2010**: Développeur chez [Evolix][Evolix]<br />
+    Mise en place d'une infrastructure Ruby on Rails sur les serveurs de la
+    société et rédaction de documentation sur les procédures à suivre. Le suivi
+    de l'avancée a été publié sur un blog ouvert pour l'occasion.
 
-* **Juin/Juillet 2010**: Développeur chez [Evolix][Evolix]<br />
-  Mise en place d'une infrastructure Ruby on Rails sur les serveurs de la
-  société et rédaction de documentation sur les procédures à suivre. Le suivi
-  de l'avancée a été publié sur un blog ouvert pour l'occasion.
+    Utilisation de ces recommandations pour le déploiement en Rails de [Maptimize][Maptimize].
 
-  Utilisation de ces recommandations pour le déploiement en Rails de [Maptimize][Maptimize].
-
-  Formation du reste de l'équipe aux bases du langage Ruby.
+    Formation du reste de l'équipe aux bases du langage Ruby.
 
 ---
 
