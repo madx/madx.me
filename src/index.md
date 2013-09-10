@@ -5,13 +5,12 @@ François Vaux
 =============
 
 I'm a web developer working at [Synbioz](http://synbioz.com/) where I build web
-applications using Ruby on Rails and JavaScript.
+applications using *Ruby on Rails* and *JavaScript*.
 
 I'm also in charge of developing our brand in the South of France through
 [Azur on Rails](http://azuronrails.com/).
 
-This site is where I keep my writings, among other things. You can follow me on
-Twitter, Github or Google+, or contact me through XMPP.
+You can follow me on Twitter, Github or Google+, or reach me through XMPP.
 
 ``` #haml
 %ul.social-list
@@ -33,7 +32,9 @@ Twitter, Github or Google+, or contact me through XMPP.
         %span Jabber/XMPP
 ```
 
-Articles
+You can also have a look at my [resume in French](cv.html) if you're interested.
+
+Writings
 --------
 
 * [Nouvelles Opportunités](/articles/nouvelles_opportunites.html)
