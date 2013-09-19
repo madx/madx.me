@@ -22,10 +22,10 @@ class Renderer < Redcarpet::Render::HTML
 
     if language.start_with?('#')
       processor = language.slice(1..-1)
-      send(processor, code) if respond_to?(processor)
-    else
-      Albino.colorize(code, language).gsub("\n", "&#10;")
+      return send(processor, code) if respond_to?(processor)
     end
+
+    Albino.colorize(code, language).gsub("\n", "&#10;")
   end
 
   def hrule
@@ -60,7 +60,10 @@ HTML = MKDN.pathmap('%{^src,build}d/%n.html')
 
 MKDN_DIRS = FileList['src/**/*'].select { |fn| File.directory?(fn) }
 HTML_DIRS = MKDN_DIRS.pathmap('%{^src,build}p')
-MEDIA_DIR = 'build/media'
+
+ASSETS_DIR    = 'static/'
+ASSETS_SOURCE = FileList['static/**/*']
+ASSETS_OUTPUT = ASSETS_SOURCE.pathmap('%{^static,build}p')
 
 html_to_mkdn = lambda { |p| p.pathmap('%{^build,src}d/%n.md') }
 
@@ -69,7 +72,7 @@ html_to_mkdn = lambda { |p| p.pathmap('%{^build,src}d/%n.md') }
 
 CLOBBER.include(HTML)
 CLOBBER.include(HTML_DIRS)
-CLOBBER.include('build/media')
+CLOBBER.include(ASSETS_OUTPUT)
 
 HTML_DIRS.each { |dir| directory dir }
 
@@ -88,20 +91,20 @@ rule '.html' => [html_to_mkdn, template_file, __FILE__] + HTML_DIRS do |task|
   end
 end
 
-directory MEDIA_DIR
-
 desc "Update the media folder"
-task :update_media => MEDIA_DIR do
-  sh "cp -urv media/ #{MEDIA_DIR.pathmap('%d')}"
+task :update_media => ASSETS_DIR do
+  sh "cp -urv static/* build/"
 end
 
 desc "List sources and outputs"
 task :env do
-  print_file_list = lambda { |fl| puts fl.map { |p| "  #{p}" }.join("\n") }
+  print_file_list = lambda { |fl| fl.each { |p| puts "  #{p}" } }
   puts "Sources:"
   print_file_list[MKDN]
   puts "Documents:"
   print_file_list[HTML]
+  puts "Assets:"
+  print_file_list[ASSETS_OUTPUT]
 end
 
 desc "Deploy using rsync"
