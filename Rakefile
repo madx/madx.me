@@ -61,6 +61,7 @@ HTML = MKDN.pathmap('%{^src,build}d/%n.html')
 MKDN_DIRS = FileList['src/**/*'].select { |fn| File.directory?(fn) }
 HTML_DIRS = MKDN_DIRS.pathmap('%{^src,build}p')
 
+BUILD_DIR     = 'build/'
 ASSETS_DIR    = 'static/'
 ASSETS_SOURCE = FileList['static/**/*']
 ASSETS_OUTPUT = ASSETS_SOURCE.pathmap('%{^static,build}p')
@@ -75,6 +76,8 @@ CLOBBER.include(HTML_DIRS)
 CLOBBER.include(ASSETS_OUTPUT)
 
 HTML_DIRS.each { |dir| directory dir }
+
+directory BUILD_DIR
 
 rule '.html' => [html_to_mkdn, template_file, __FILE__] + HTML_DIRS do |task|
   puts "compile #{task.name}"
@@ -92,7 +95,7 @@ rule '.html' => [html_to_mkdn, template_file, __FILE__] + HTML_DIRS do |task|
 end
 
 desc "Update the media folder"
-task :update_media => ASSETS_DIR do
+task :update_media => [ASSETS_DIR, BUILD_DIR] do
   sh "cp -urv static/* build/"
 end
 

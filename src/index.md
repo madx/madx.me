@@ -21,20 +21,15 @@ Writings
 --------
 
 * [Nouvelles Opportunités](/articles/nouvelles_opportunites.html)
-  <span class="date">Mar 11<sup>th</sup>, 2013</span>
-  ![fr](/media/flag_fr.png)
+  <span class="date">Mar 11<sup>th</sup>, 2013</span> (fr)
 * [Efficient Vim](/articles/efficient_vim.html)
-  <span class="date">Mar 4<sup>th</sup>, 2013</span>
-  ![en](/media/flag_en.png)
+  <span class="date">Mar 4<sup>th</sup>, 2013</span> (en)
 * [Managing your identity in Git](/articles/managing_your_identity_in_git.html)
-  <span class="date">Feb 1<sup>st</sup>, 2013</span>
-  ![en](/media/flag_en.png)
+  <span class="date">Feb 1<sup>st</sup>, 2013</span> (en)
 * [git rebase --autosquash](/articles/git_rebase_autosquash.html)
-  <span class="date">May 24<sup>th</sup>, 2012</span>
-  ![fr](/media/flag_fr.png)
+  <span class="date">May 24<sup>th</sup>, 2012</span> (fr)
 * [Étendre MarkDown avec RedCarpet](/articles/etendre_markdown_redcarpet.html)
-  <span class="date">Dec 20<sup>th</sup>, 2011</span>
-  ![fr](/media/flag_fr.png)
+  <span class="date">Dec 20<sup>th</sup>, 2011</span> (fr)
 
 
 [tw]: https://twitter.com/madx
