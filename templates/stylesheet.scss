@@ -57,15 +57,6 @@
 @include font-face('NobileItalic', 'nobile_italic-webfont');
 @include font-face('NobileBold', 'nobile_bold-webfont');
 @include font-face('NobileBoldItalic', 'nobile_bold_italic-webfont');
-@include font-face('Symbols', 'symbols');
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: Symbols;
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  text-decoration: inherit;
-}
 
 /*
  * COLORS
@@ -89,10 +80,6 @@ html, body {
   color: $text;
 }
 
-html {
-  background-color: $background;
-}
-
 body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -101,82 +88,12 @@ body {
   max-width: 44rem;
   margin: 1.5em auto 2em;
   padding: 0.5em;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba($text, 0.42);
-
-  #avatar {
-    float: right;
-    margin: 0 0 0 1em;
-  }
-
-  nav {
-    margin: 0.5rem 0.5rem 1rem;
-    font-size: 1em;
-    line-height: 1;
-    position: relative;
-
-    li {
-      list-style-type: none;
-      display: inline-block;
-      a {
-        padding: 0em 0.75em;
-        display: inline-block;
-        text-decoration: none;
-        position: relative;
-
-        &:link, &:visited {
-          @include color-to(darken($menu-link, 10%));
-
-          &:hover, &:active {
-            @include color-to($menu-link);
-          }
-        }
-
-        &:after {
-          left: 100%;
-          content: " ";
-          position: absolute;
-          width: 1px;
-          height: 1em;
-          background-color: $menu-link;
-          top: 50%;
-          margin-top: -0.5em;
-          transform: rotate(15deg);
-        }
-      }
-      &:last-child a:after {
-        display: none;
-      }
-      &:first-child a {
-        padding-left: 0;
-      }
-    }
-  }
 
   a:link, a:visited {
     @include color-to(darken($link, 15%));
 
     &:hover, &:active {
       @include color-to($link);
-    }
-
-    i {
-      &.icon-twitter {
-        @include color-to(#2daae1);
-        &:hover { @include color-to(lighten(#2daae1, 10%)); }
-      }
-      &.icon-googleplus {
-        @include color-to(#c53527);
-        &:hover { @include color-to(#dd4b39); }
-      }
-      &.icon-github {
-        @include color-to($text);
-        &:hover { @include color-to(lighten($text, 7.5%)); }
-      }
-      &.icon-jabber {
-        @include color-to(#cc0000);
-        &:hover { @include color-to(#ff3300); }
-      }
     }
   }
 
@@ -235,6 +152,12 @@ body {
     padding: 1px 3px;
   }
 
+  img[src^="/media/avatar.png"] {
+    float: right;
+    border-radius: 50%;
+    margin:  0 1.5rem 1.5rem;
+  }
+
   img[src^="/media/images"] {
     display: block;
     margin: 1.5rem auto;
@@ -245,23 +168,6 @@ body {
     font-family: "NobileItalic";
     color: #888;
     margin-left: 0.5rem;
-  }
-
-  .social-list {
-    text-align: center;
-    font-size: 32px;
-    margin: 1em 0;
-    li {
-      list-style-type: none;
-      display: inline;
-      margin: 0 0.5em 0 0;
-      text-shadow: 1px 1px 0px rgba($text, 0.7);
-      a {
-        padding: 0 4px 0 0;
-        display: inline-block;
-        text-decoration: none;
-      }
-    }
   }
 
   div.highlight {
@@ -291,14 +197,15 @@ body {
   }
 
   footer {
-    font-size: 32px;
+    font-size: 0.9em;
     line-height: 1;
     padding-top: 1rem;
     margin-top: 2rem;
-    border-top: 1px solid desaturate(rgba($text, 0.5), 30%);
     text-align: center;
     a:link, a:visited {
       @include color-to(darken($menu-link, 10%));
+      text-decoration: none;
+      font-weight: bold;
 
       &:hover, &:active {
         @include color-to($menu-link);

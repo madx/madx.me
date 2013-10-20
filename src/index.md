@@ -1,36 +1,19 @@
 title: ~
 ---
 
+![My avatar](/media/avatar.png)
+
 François Vaux
 =============
 
-I'm a web developer working at [Synbioz](http://synbioz.com/) where I build web
-applications using *Ruby on Rails* and *JavaScript*.
+I'm a developer working at [Wyplay](http://wyplay.com/) where I build
+applications for set-top-boxes and connected TVs.
 
-I'm also in charge of developing our brand in the South of France through
-[Azur on Rails](http://azuronrails.com/).
+I'm also a member of [Putain de Code](http://putaindecode.fr/), a French group
+of hackers promoting best practices and teaching to develop better in the
+*langue de Molière*.
 
-You can follow me on Twitter, Github or Google+, or reach me through XMPP.
-
-``` #haml
-%ul.social-list
-  %li
-    %a{href: 'https://twitter.com/madx'}
-      %i.icon-twitter
-        %span Twitter
-  %li
-    %a{href: 'https://github.com/madx'}
-      %i.icon-github
-        %span Github
-  %li
-    %a{href: 'https://plus.google.com/103196461831687541649'}
-      %i.icon-googleplus
-        %span Google+
-  %li
-    %a{href: 'xmpp:francois.vaux@im.apinc.org'}
-      %i.icon-jabber
-        %span Jabber/XMPP
-```
+You can follow me on [Twitter][tw] or explore my [GitHub][gh] profile.
 
 You can also have a look at my [resume in French](cv.html) if you're interested.
 
@@ -52,3 +35,8 @@ Writings
 * [Étendre MarkDown avec RedCarpet](/articles/etendre_markdown_redcarpet.html)
   <span class="date">Dec 20<sup>th</sup>, 2011</span>
   ![fr](/media/flag_fr.png)
+
+
+[tw]: https://twitter.com/madx
+[gh]: https://github.com/madx
+

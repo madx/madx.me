@@ -8,19 +8,11 @@
     %link{rel: 'stylesheet', href: '/media/stylesheet.css', type: 'text/css'}
     %title= [meta.title, "François Vaux – Ruby &amp; JavaScript developer"].compact.join(' — ')
   %body
-    %img#avatar{src: "/media/avatar.png"}
-    %nav
-      %li>
-        %a{href: '/'}>
-          %i.icon-home
-            %span Home
-
     = yield
 
     %footer
-      %a{href: "http://creativecommons.org/licenses/by-nc-sa/3.0/fr/deed.en", rel: 'license', title: 'Licensing terms'}
-        %i.icon-cc
-          %span License
+      %a{href: "http://creativecommons.org/licenses/by-nc-sa/3.0/fr/deed.en", rel: 'license', title: 'Licensing terms'} ©
+      François Vaux, 2012-#{Time.now.strftime("%Y")}
 
     :javascript
       var _gaq = _gaq || [];
