@@ -20,6 +20,8 @@ You can also have a look at my [resume in French](cv.html) if you're interested.
 Writings
 --------
 
+* [Créer et gérer un groupe local](/articles/creer_et_gerer_un_groupe_local.html)
+  <span class="date">Jun 26<sup>th</sup>, 2013</span> (fr)
 * [Nouvelles Opportunités](/articles/nouvelles_opportunites.html)
   <span class="date">Mar 11<sup>th</sup>, 2013</span> (fr)
 * [Efficient Vim](/articles/efficient_vim.html)
