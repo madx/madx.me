@@ -169,20 +169,15 @@ body {
     margin-left: 0.5rem;
   }
 
-  div.highlight {
-    padding: 0;
+  pre.highlight {
+    padding: 1rem;
     margin: 1.5rem 1rem;
+    max-width: 40rem;
     @include border-radius(1rem);
     background-color: #1d1d1d;
     color: #f6f3e8;
-
-    pre {
-      font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
-      max-width: 40rem;
-      padding: 1rem;
-      margin: 0;
-      overflow: auto;
-    }
+    font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+    overflow: auto;
   }
 
   .vignette.right {

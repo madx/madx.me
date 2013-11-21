@@ -1,9 +1,9 @@
 title: git rebase --autosquash
 ---
 
-``` #haml
-.date 24 mai 2012
-```
+<div class="date">
+24 mai 2012
+</div>
 
 git rebase --autosquash
 =======================

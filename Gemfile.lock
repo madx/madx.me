@@ -1,20 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    albino (1.3.3)
-      posix-spawn (>= 0.3.6)
     haml (3.1.7)
-    posix-spawn (0.3.6)
     rake (10.0.2)
     redcarpet (2.1.1)
+    rouge (1.1.0)
     sass (3.2.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  albino
   haml
   rake
   redcarpet
+  rouge
   sass

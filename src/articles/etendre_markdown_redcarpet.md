@@ -1,9 +1,9 @@
 title: Étendre Markdown avec RedCarpet
 ---
 
-``` #haml
-.date 20 décembre 2011
-```
+<div class="date">
+20 décembre 2011
+</div>
 
 Étendre Markdown avec RedCarpet
 ===============================

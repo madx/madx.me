@@ -1,9 +1,10 @@
 title: Créer et gérer un groupe local
 ---
 
-``` #haml
-.date 26 juin 2013
-```
+<div class="date">
+26 juin 2013
+</div>
+
 # Créer et gérer un groupe local
 
 *26 juin 2013*

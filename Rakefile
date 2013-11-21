@@ -8,6 +8,8 @@ require 'rake/clean'
 require 'ostruct'
 require 'yaml'
 
+require 'rouge/plugins/redcarpet'
+
 begin
   config_file = File.expand_path('config.yml', File.dirname(__FILE__))
   Config = OpenStruct.new(YAML.load_file(config_file))
@@ -17,25 +19,10 @@ end
 # Lib
 
 class Renderer < Redcarpet::Render::HTML
-  def block_code(code, language)
-    language ||= 'ruby'
-
-    if language.start_with?('#')
-      processor = language.slice(1..-1)
-      return send(processor, code) if respond_to?(processor)
-    end
-
-    Albino.colorize(code, language).gsub("\n", "&#10;")
-  end
+  include Rouge::Plugins::Redcarpet
 
   def hrule
     "\n<hr />\n"
-  end
-
-  protected
-
-  def haml(source)
-    Haml::Engine.new(source, HAML_OPTIONS).render
   end
 end
 

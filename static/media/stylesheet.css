@@ -106,21 +106,18 @@ body {
     font-family: "NobileItalic";
     color: #888;
     margin-left: 0.5rem; }
-  body div.highlight {
-    padding: 0;
+  body pre.highlight {
+    padding: 1rem;
     margin: 1.5rem 1rem;
+    max-width: 40rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -o-border-radius: 1rem;
     border-radius: 1rem;
     background-color: #1d1d1d;
-    color: #f6f3e8; }
-    body div.highlight pre {
-      font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
-      max-width: 40rem;
-      padding: 1rem;
-      margin: 0;
-      overflow: auto; }
+    color: #f6f3e8;
+    font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+    overflow: auto; }
   body .vignette.right {
     float: right;
     margin: 0 0 0 1em; }

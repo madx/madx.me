@@ -1,9 +1,9 @@
 title: Managing your identity in Git
 ---
 
-``` #haml
-.date Feb 1<sup>st</sup>, 2013
-```
+<div class="date">
+Feb 1<sup>st</sup>, 2013
+</div>
 
 Managing your identity in Git
 =============================
