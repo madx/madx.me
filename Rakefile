@@ -99,7 +99,7 @@ end
 
 desc "Deploy using rsync"
 task :deploy do
-  system "rsync -e ssh -avz --delete-after build/ #{Config.deploy_to}"
+  system "rsync -e ssh -avz --delete-after --no-perms build/ #{Config.deploy_to}"
 end
 
 task :default => [:update_media, 'templates'] + HTML
