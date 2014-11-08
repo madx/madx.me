@@ -37,3 +37,13 @@ You can follow me on [Twitter][tw] or explore my [GitHub][gh] profile.
 [gh:veil]: https://github.com/madx/veil 
 [gh:mdr]: https://github.com/halffullheart/mdr 
 [gh:sharedrop]: https://github.com/madx/sharedrop 
+
+## Articles
+
+I wrote some articles (in French), you can read them here. I also write
+technical articles at [Putain de Code][p:articles]
+
+- [Créer et gérer un groupe local](/articles/creer_et_gerer_un_groupe_local.html)
+- [git rebase --autosquash](/articles/git_rebase_autosquash.html)
+
+[p:articles]: http://putaindecode.fr/posts/
