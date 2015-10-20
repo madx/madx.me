@@ -1,5 +1,3 @@
-# François Vaux
-
 I'm a developer working at [Wyplay][wyplay] where I build Web-based user
 interfaces for set-top-boxes and connected TVs.
 

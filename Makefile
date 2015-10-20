@@ -22,7 +22,7 @@ ENDC  = "\\033[0m"
 PAGE_EXT = jade
 
 # Estension for source stylesheets
-STYLE_EXT = styl
+STYLE_EXT = css
 
 # Source files
 PAGES       = $(shell find sources/pages/ \
@@ -67,7 +67,7 @@ endef
 
 # Commands used by the stylesheet-building rule
 define stylesheet-cc =
-@ stylus -u autoprefixer-stylus -o $(shell dirname $@) >/dev/null $<
+@ cssnext $< $@
 endef
 
 # Commands used by the assets-building rule
@@ -137,19 +137,13 @@ setup: npm-deps bootstrap
 # Install npm dependencies
 npm-deps:
 	@ $(ECHO) "$(COL_Y)▸ Installing dependencies$(ENDC)"
-	@ sudo npm install -g jade stylus autoprefixer-stylus
+	@ sudo npm install --save-dev jade cssnext normalize.css
 
 # Bootstrap files
 bootstrap:
 	@ test -d sources && { echo -e "\n$(COL_R)✗ Already set up$(ENDC)\n"; exit 1; } || true
 	@ $(ECHO) "$(COL_Y)▸ Creating directory structure$(ENDC)"
 	@ mkdir -p sources/{layouts,pages,stylesheets} static
-	@
-	@ $(ECHO) "$(COL_Y)▸ Installing normalize$(ENDC)"
-	@ curl -sL https://raw.githubusercontent.com/skw/normalize.stylus/master/normalize.styl -o sources/stylesheets/_normalize.styl
-	@ sed -i "9s/^/\/\//" sources/stylesheets/_normalize.styl
-	@ sed -i "s/\(box-sizing\)(\([^)]\+\))/\1 \2/" sources/stylesheets/_normalize.styl
-	@ $(ECHO) "  sources/stylesheets/_normalize.styl"
 	@
 	@ $(ECHO) "$(COL_Y)▸ Bootstraping with default files$(ENDC)"
 	@ curl -sL https://raw.githubusercontent.com/madx/veil/master/skel/default.jade -o sources/layouts/default.jade

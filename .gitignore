@@ -1,2 +1,3 @@
 .remote_location
 build/
+node_modules/
