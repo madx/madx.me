@@ -1,0 +1,28 @@
+{
+  "name": "madx.me",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "build.js",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.3",
+    "deku": "^0.5.6",
+    "eslint": "^1.7.2",
+    "eslint-config-airbnb": "^0.1.0",
+    "eslint-plugin-react": "^3.6.3",
+    "glob": "^5.0.15",
+    "mkdirp": "^0.5.1",
+    "virtual-element": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "babel-node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.garbure.info/madx/madx.me.git"
+  },
+  "author": "madx",
+  "license": "MIT"
+}
