@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title
+      if title
+        | #{title} – François Vaux
+      else
+        | François Vaux
+    link(rel="stylesheet" href="/stylesheet.css")
+  body
+    nav.Nav
+      li
+        a(href="/") /
+      li
+        a(href="/articles/") /articles/
+    section.Content
+      != formattedContent
