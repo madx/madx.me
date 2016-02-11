@@ -79,14 +79,19 @@ function copyFile(source) {
   try {
     fs.ensureDirSync(path.dirname(destination))
     fs.copySync(source, destination)
-    console.log(fmt.green(`${source} -> ${destination}`))
+    console.log(fmt.green(`copy ${source}`))
   } catch (err) {
     console.error(err)
   }
 }
 
 function processFile(file) {
-  if (isMd(file)) {
+  const stats = fs.lstatSync(file)
+
+  if (stats.isDirectory()) {
+    // Skip directories
+    console.info(fmt.gray(`skip ${file}`))
+  } else if (isMd(file)) {
     processMarkdown(file)
   } else {
     copyFile(file)
