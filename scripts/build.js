@@ -70,7 +70,7 @@ function processMarkdown(source) {
     }
   })
 
-  console.log(fmt.green(`${source} -> ${destination}`))
+  console.log(fmt.green(`convert ${source}`))
 }
 
 function copyFile(source) {
