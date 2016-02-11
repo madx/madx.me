@@ -61,10 +61,10 @@ function processMarkdown(source) {
     }
 
     const document = matter.read(source)
-    document.formattedContent = md.render(document.content)
+    document.data.formattedContent = md.render(document.content)
 
     try {
-      fs.writeFileSync(destination, render(document))
+      fs.writeFileSync(destination, render(document.data))
     } catch (err_) {
       console.error(err_)
     }

@@ -1,3 +1,6 @@
+---
+title: Créer et gérer un groupe local
+---
 # Créer et gérer un groupe local
 
 *26 juin 2013*

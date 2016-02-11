@@ -1,3 +1,6 @@
+---
+title: git rebase --autosquash
+---
 git rebase --autosquash
 =======================
 
