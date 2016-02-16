@@ -5,8 +5,8 @@ title: Articles
 
 ## Software <a name="software"></a>
 
-- [Créer et gérer un groupe local](articles/creer_et_gerer_un_groupe_local.html) (fr)
-- [git rebase --autosquash](articles/git_rebase_autosquash.html) (fr)
+- [Créer et gérer un groupe local](/articles/creer_et_gerer_un_groupe_local.html) (fr)
+- [git rebase --autosquash](/articles/git_rebase_autosquash.html) (fr)
 
 ## At Putain de Code <a name="putaindecode"></a>
 
