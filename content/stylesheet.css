@@ -445,10 +445,10 @@ body {
   .Nav li:after {
   }
   .Nav li a {
-    color: #04f;
+    color: #08c;
   }
   .Nav li a:hover, .Nav li a:focus {
-    color: #02d;
+    color: #0ac;
     text-decoration: none;
   }
 
@@ -457,7 +457,7 @@ body {
   margin: 16px auto;
   margin: 1rem auto;
   max-width: 80ex;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .Content > :first-child {
@@ -498,6 +498,8 @@ body {
 .Content h2 {
   font-size: 27px;
   font-size: 1.7rem;
+  margin-top: 32px;
+  margin-top: 2rem;
   color: #444;
 }
 
@@ -508,6 +510,8 @@ body {
 .Content h3 {
   font-size: 24px;
   font-size: 1.5rem;
+  margin-top: 32px;
+  margin-top: 2rem;
   color: #555;
 }
 
@@ -516,10 +520,10 @@ body {
 }
 
 .Content a[href] {
-  color: #04f;
+  color: #08c;
 }
 .Content a:hover, .Content a:focus {
-  color: #02d;
+  color: #0ac;
   text-decoration: none;
 }
 
