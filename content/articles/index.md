@@ -1,5 +1,7 @@
+---
+title: Articles
+---
 # Articles
-
 
 ## Software <a name="software"></a>
 
