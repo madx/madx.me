@@ -426,6 +426,8 @@ th {
 body {
   color: #222;
   font-family: "Droid Sans Mono", monospace;
+  padding: 16px;
+  padding: 1rem;
 }
 
 .Nav {

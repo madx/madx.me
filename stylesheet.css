@@ -3,6 +3,7 @@
 body {
   color: #222;
   font-family: "Droid Sans Mono", monospace;
+  padding: 1rem;
 }
 
 .Nav {
