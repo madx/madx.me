@@ -5,6 +5,7 @@ title: Articles
 
 ## Software <a name="software"></a>
 
+- [A simpler alternative to Flux and Redux](/articles/a-simpler-alternative-to-flux-and-redux.html) (fr)
 - [Créer et gérer un groupe local](/articles/creer_et_gerer_un_groupe_local.html) (fr)
 - [git rebase --autosquash](/articles/git_rebase_autosquash.html) (fr)
 
