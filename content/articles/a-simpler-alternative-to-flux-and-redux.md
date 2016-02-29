@@ -141,6 +141,9 @@ checking the return type of an action and act differently when it's a promise.
 Using two actions like in Redux works (one to the request, one for the
 response) but it does bring some bloat to the code.
 
+I'm also thinking about a way to implement middleware-like functionality, like
+in Redux.
+
 [flux]: https://facebook.github.io/flux/
 [flux:overview]: https://facebook.github.io/flux/docs/overview.html
 [redux]: http://redux.js.org/
