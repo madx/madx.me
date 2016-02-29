@@ -99,7 +99,7 @@ Below is a simple app built with Elfi, [Deku][deku] and [Immutable].
 
 import {element, createApp} from 'deku'
 import Immutable from 'immutable'
-import {createStore} from './madux'
+import {createStore} from 'elfi'
 
 const initialState = Immutable.fromJS({
   isOn: false
