@@ -7,6 +7,14 @@ html(lang="en")
         | #{title} – François Vaux
       else
         | François Vaux
+    meta(name="author" content=(meta && meta.author) ? meta.author : "François Vaux")
+    if description
+      meta(name="description" content=description)
+    if twitter
+      meta(name="twitter:card" content="summary")
+      meta(name="twitter:site" content="@madx")
+      meta(name="twitter:title" content=title)
+      meta(name="twitter:description" content=description)
     link(rel="stylesheet" href="/stylesheet.css")
   body
     nav.Nav
@@ -16,6 +24,21 @@ html(lang="en")
         a(href="/articles/") /articles/
     section.Content
       != formattedContent
+      if disqus
+        #disqus_thread
+        script.
+          var disqus_config = function () {
+            this.page.url = "#{url}";
+            this.page.identifier = "#{url}";
+          };
+          (function() {
+              var d = document, s = d.createElement('script');
+              
+              s.src = '//madx.disqus.com/embed.js';
+              
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
     script
       :cdata-js
         (function() {

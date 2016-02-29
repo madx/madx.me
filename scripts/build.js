@@ -61,6 +61,7 @@ function processMarkdown(source) {
     }
 
     const document = matter.read(source)
+    document.data.url = `http://madx.me${destination.replace(/^build/, "")}`
     document.data.formattedContent = md.render(document.content)
 
     try {
