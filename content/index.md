@@ -46,7 +46,7 @@ And [many more on GitHub!][gh:repos]
 I write some [technical articles](/articles/#software) about software
 development, which you can find here. Here are the most recent ones:
 
-- [A simpler alternative to Flux and Redux](/articles/a-simpler-alternative-to-flux-and-redux.html) (fr)
+- [A simpler alternative to Flux and Redux](/articles/a-simpler-alternative-to-flux-and-redux.html) (en)
 - [Créer et gérer un groupe local](/articles/creer_et_gerer_un_groupe_local.html) (fr)
 - [git rebase --autosquash](/articles/git_rebase_autosquash.html) (fr)
 
