@@ -1,8 +1,10 @@
 @import "normalize.css";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,700italic,400italic,300,300italic&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 
 body {
   color: #222;
-  font-family: "Droid Sans Mono", monospace;
+  font-family: Lato, sans-serif;
   padding: 1rem;
 }
 
@@ -21,11 +23,14 @@ body {
   .Nav li::after {
   }
   .Nav li a {
-    color: #08c;
+    padding: 0.25rem 0.5rem;
+    background-color: #08c;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
   }
   .Nav li a:hover, .Nav li a:focus {
-    color: #0ac;
-    text-decoration: none;
+    background-color: #0ac;
   }
 
 
@@ -62,28 +67,16 @@ body {
   color: #333;
 }
 
-.Content h1::before {
-  content: "# ";
-}
-
 .Content h2 {
   font-size: 1.7rem;
   margin-top: 2rem;
   color: #444;
 }
 
-.Content h2::before {
-  content: "## ";
-}
-
 .Content h3 {
   font-size: 1.5rem;
   margin-top: 2rem;
   color: #555;
-}
-
-.Content h3::before {
-  content: "### ";
 }
 
 .Content a[href] {
@@ -105,6 +98,7 @@ body {
   overflow-x: auto;
   padding: 0.5em 22px;
   background: #1d1f21;
+  font-family: "Droid Sans Mono", monospace;
 }
 
 /*selection color*/
