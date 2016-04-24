@@ -16,30 +16,29 @@ You can follow me on [Twitter][tw] or explore my [GitHub][gh] profile.
 
 ## Software
 
+* [elfi][gh:elfi] is a very simple implementation of the [Flux][flux] pattern.
 * [git-identity][gh:git-identity] is a tool that help you manages your identity
   as a Git commiter.
+* [ShareDrop][gh:sharedrop] is a simple way to synchronize files with a remote
+  folder and have an URL to share them. I use this mainly for sharing
+  screenshots.
 * My [dotfiles][gh:propane] are available with proper Makefiles to
   automatically set them up.
-* [Therm][gh:therm] is own VTE-based terminal emulator with a minimal feature
-  set. Mostly, it remembers your current working directory when opening a new
-  window.
 * [Veil][gh:veil] is a static website builder using Make and JavaScript. It is
   used to build this site!
 * [MDR][gh:mdr] is a cool diff viewer for Git for which I built a GTK port for
   Linux.
-* [ShareDrop][gh:sharedrop] is a simple way to synchronize files with a remote
-  folder and have an URL to share them. I use this mainly for sharing
-  screenshots.
 
 And [many more on GitHub!][gh:repos]
 
+[gh:elfi]: https://github.com/madx/elfi
 [gh:git-identity]: https://github.com/madx/git-identity
 [gh:propane]: https://github.com/madx/propane
-[gh:therm]: https://github.com/madx/therm
 [gh:veil]: https://github.com/madx/veil
 [gh:mdr]: https://github.com/halffullheart/mdr
 [gh:sharedrop]: https://github.com/madx/sharedrop
 [gh:repos]: https://github.com/madx?tab=repositories
+[flux]: https://facebook.github.io/flux/
 
 ## Articles
 
