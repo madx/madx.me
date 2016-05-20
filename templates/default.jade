@@ -16,40 +16,53 @@ html(lang="en")
       meta(name="twitter:site" content="@madx")
       meta(name="twitter:title" content=title)
       meta(name="twitter:description" content=description)
-    link(rel="stylesheet" href="/stylesheet.css")
+    link(rel="stylesheet" href="/css/stylesheet.css")
   body
-    nav.Nav
-      li
-        a(href="/") /
-      li
-        a(href="/articles/") /articles/
-    section.Content
-      != formattedContent
-      if disqus
-        #disqus_thread
-        script.
-          var disqus_config = function () {
-            this.page.url = "#{url}";
-            this.page.identifier = "#{url}";
-          };
+    .content-wrapper
+      nav
+        li
+          a(href="/") home
+        li
+          a(href="/articles/") articles
+      header.hero
+        h1 François Vaux
+        h2 software developer <span>╳</span> boardgames lover
+
+      section
+        != formattedContent
+        if disqus
+          #disqus_thread
+          script.
+            var disqus_config = function () {
+              this.page.url = "#{url}";
+              this.page.identifier = "#{url}";
+            };
+            (function() {
+                var d = document, s = d.createElement('script');
+                
+                s.src = '//madx.disqus.com/embed.js';
+                
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+
+      footer.
+        @ #[a(href="//madx.me/") François Vaux] 2016
+        /
+        #[a(href="https://twitter.com/madx") Twitter]
+        /
+        #[a(href="https://github.com/madx") GitHub]
+
+      script
+        :cdata-js
           (function() {
-              var d = document, s = d.createElement('script');
-              
-              s.src = '//madx.disqus.com/embed.js';
-              
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-          })();
-    script
-      :cdata-js
-        (function() {
-          if(window.location.hostname !== "madx.me") return
+            if(window.location.hostname !== "madx.me") return
 
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-3749748-4', 'auto');
-          ga('send', 'pageview');
-        })()
+            ga('create', 'UA-3749748-4', 'auto');
+            ga('send', 'pageview');
+          })()

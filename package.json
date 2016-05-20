@@ -25,19 +25,19 @@
     "babel-preset-stage-2": "^6.3.13",
     "chalk": "^1.1.1",
     "cssnext": "^1.8.4",
-    "fs-extra": "^0.26.5",
-    "glob": "^6.0.4",
+    "fs-extra": "^0.30.0",
+    "glob": "^7.0.3",
     "gray-matter": "^2.0.2",
     "highlight.js": "^9.1.0",
     "jade": "^1.11.0",
-    "markdown-it": "^5.1.0",
+    "markdown-it": "^6.0.2",
     "mkdirp": "^0.5.1"
   },
   "devDependencies": {
-    "babel-eslint": "^5.0.0-beta8",
+    "babel-eslint": "^6.0.4",
     "cssnext": "^1.8.4",
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^4.0.0",
-    "normalize.css": "^3.0.3"
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb": "^9.0.1",
+    "normalize.css": "^4.1.1"
   }
 }

@@ -1,18 +1,13 @@
-# madx.me
+## About me
 
-I'm a developer working at [Wyplay][wyplay] where I build Web-based user
-interfaces for set-top-boxes and connected TVs.
-
-I'm a former member of [Putain de Code][pbang], a French group of web hackers
-promoting best practices and teaching to develop better in the langue de
-Molière.
+I'm a software developer, specialising in Web Front-end development in
+JavaScript.
 
 You can follow me on [Twitter][tw] or explore my [GitHub][gh] profile.
 
-[wyplay]: http://wyplay.com/
-[pbang]: http://putaindecode.fr/
 [tw]: https://twitter.com/madx
 [gh]: https://github.com/madx
+[bgg]: https://boardgamegeek.com/collection/user/madx
 
 ## Software
 
