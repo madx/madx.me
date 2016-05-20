@@ -146,6 +146,18 @@ section a:hover {
   opacity: 0.7;
 }
 
+section form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+section form input[type=email], section form textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 0;
+}
+
 footer {
   position: absolute;
   left: 0;
