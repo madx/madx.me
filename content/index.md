@@ -56,3 +56,9 @@ well):
 [p:make]: http://putaindecode.io/fr/articles/make/
 [p:redirections]: http://putaindecode.io/fr/articles/shell/redirections/
 [p:git]: http://putaindecode.io/fr/articles/git/
+
+## Boardgames
+
+I *love* boardgames, I [collect them][bgg:collection], way more than I actually play them.
+
+[bgg:collection]: https://boardgamegeek.com/collection/user/madx?gallery=small&rankobjecttype=subtype&rankobjectid=1&columns=title|status|version|rating|bggrating|plays|comment|commands&geekranks=Board+Game+Rank&objecttype=thing&ff=1&subtype=boardgame
