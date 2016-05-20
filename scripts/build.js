@@ -7,6 +7,7 @@ import matter from "gray-matter"
 import jade from "jade"
 import fmt from "chalk"
 import MarkdownIt from "markdown-it"
+import cssnext from "cssnext"
 import hljs from "highlight.js"
 
 const CONTENT_DIR = "content"
@@ -56,8 +57,12 @@ function convertPath(contentRelativePath) {
   return buildPath(path.relative(CONTENT_DIR, contentRelativePath))
 }
 
-function isMd(file) {
+function isMarkdown(file) {
   return file.endsWith(".md")
+}
+
+function isCSS(file) {
+  return file.endsWith(".css")
 }
 
 function die(error) {
@@ -89,6 +94,30 @@ function processMarkdown(source) {
   console.log(fmt.green(`convert ${source}`))
 }
 
+function processCSS(source) {
+  const destination = convertPath(source)
+
+  fs.ensureFile(destination, (err) => {
+    if (err) {
+      return console.error(err)
+    }
+
+    const input = fs.readFileSync(source)
+
+    try {
+      const output = cssnext(input.toString(), {
+        from: source,
+        to: destination,
+      })
+      fs.writeFileSync(destination, output)
+    } catch (err_) {
+      console.error(err_)
+    }
+  })
+
+  console.log(fmt.green(`convert ${source}`))
+}
+
 function copyFile(source) {
   const destination = convertPath(source)
 
@@ -107,8 +136,10 @@ function processFile(file) {
   if (stats.isDirectory()) {
     // Skip directories
     console.info(fmt.gray(`skip ${file}`))
-  } else if (isMd(file)) {
+  } else if (isMarkdown(file)) {
     processMarkdown(file)
+  } else if (isCSS(file)) {
+    processCSS(file)
   } else {
     copyFile(file)
   }
