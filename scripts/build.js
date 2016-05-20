@@ -12,7 +12,20 @@ import hljs from "highlight.js"
 const CONTENT_DIR = "content"
 const BUILD_DIR = "build"
 
-const render = jade.compileFile("template.jade", {pretty: true})
+function render(template, context) {
+  const renderer = template in render.__renderers__ ?
+    render.__renderers__[template]
+    :
+    jade.compileFile(`templates/${template}.jade`, {pretty: true})
+
+  if (!(template in render.__renderers__)) {
+    render.__renderers__[template] = renderer
+  }
+
+  return renderer(context)
+}
+render.__renderers__ = {}
+
 const md = new MarkdownIt({
   html: true,
   xhtmlOut: true,
@@ -61,11 +74,13 @@ function processMarkdown(source) {
     }
 
     const document = matter.read(source)
+    document.data.template = document.data.template || "default"
     document.data.url = `http://madx.me${destination.replace(/^build/, "")}`
     document.data.formattedContent = md.render(document.content)
 
     try {
-      fs.writeFileSync(destination, render(document.data))
+      const output = render(document.data.template, document.data)
+      fs.writeFileSync(destination, output)
     } catch (err_) {
       console.error(err_)
     }
